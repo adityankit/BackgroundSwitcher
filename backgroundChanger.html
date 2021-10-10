@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGroundChanger</title>
+    <style>
+        body{
+            background-color: wheat;
+            background-repeat: no-repeat;
+            background-attachment:scroll;
+            background-size: 100%;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+            font-size: 40px;
+
+
+        }
+        img{
+            width: 20%;
+            height: 20%;
+            align-content: center;
+            margin-left: 40%;
+        }
+        p{
+            font-size: 20px;
+            text-align: justify;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+        .btn{
+            width:30px;
+            height: 30px;
+            display:inline-block;
+            box-sizing: border-box;
+            border-radius: 50%;       
+            border:solid gray 2px;            
+            cursor: pointer;
+            
+        }
+        #f1{
+           background-color: white;
+        }
+
+        
+        #f2{
+           background-color: aquamarine;
+        }
+
+        
+        #f3{
+            background-color: #ce9aff;
+        }
+
+        
+        #f4{
+            background-color: black;
+           
+        }
+        #color-switcher{
+            text-align: right;
+        
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div id="color-switcher">
+        <span class="btn"  id="f1" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="f2" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="f3"onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="f4" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="text">About Us</h1>
+    <img src ="aboutus.png" alt="" >
+    <p class="text">         
+        Our family teaches us the meaning of love, intimacy, and togetherness. Its family influences the thinking and mentality of a child. We learn about the accepted behavioural ways from our family. Our actions are a direct representation of the family we have grown up in. Just like a right family has a good impact on a person, a person who grows up in a family which encourages negativity tends to have behavioural issues.<br>
+        
+        So, it is one’s family which plays a crucial role in one’s development. A person looks up to the people in his family and tends to follow in their footsteps. People must grow up with good role models; otherwise, they will negatively influence the people around them and drag the name of their families across the mud.
+    </p>
+    <script>
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            let txt=document.getElementsByClassName("text");
+            if(color=="#000000"){
+                for(let elm of txt){
+                    elm.style.color="white";
+                }
+            }
+
+            else{
+                for(let elm of txt){
+                 elm.style.color="black";
+                }
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>
